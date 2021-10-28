@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainView.swift
 //  OnePieceWorld
 //
 //  Created by Syber Expertise on 28/10/2021.
@@ -7,13 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class MainView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
