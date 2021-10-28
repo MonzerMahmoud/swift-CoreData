@@ -13,6 +13,7 @@
 		F48370BA272B15FE001D4D34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48370B9272B15FE001D4D34 /* Assets.xcassets */; };
 		F48370BD272B15FE001D4D34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48370BB272B15FE001D4D34 /* LaunchScreen.storyboard */; };
 		F48370CC272B177F001D4D34 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48370CB272B177F001D4D34 /* MainView.swift */; };
+		F48370D0272B19E2001D4D34 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48370CF272B19E2001D4D34 /* ImageConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F48370BC272B15FE001D4D34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F48370BE272B15FE001D4D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F48370CB272B177F001D4D34 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F48370CF272B19E2001D4D34 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		F48370AC272B15F5001D4D34 /* OnePieceWorld */ = {
 			isa = PBXGroup;
 			children = (
+				F48370CE272B19CA001D4D34 /* Constants */,
 				F48370C8272B164A001D4D34 /* Supporting Files */,
 				F48370C7272B162D001D4D34 /* Controllers */,
 				F48370C6272B1625001D4D34 /* Views */,
@@ -97,6 +100,14 @@
 				F48370B9272B15FE001D4D34 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F48370CE272B19CA001D4D34 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F48370CF272B19E2001D4D34 /* ImageConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			files = (
 				F48370AE272B15F5001D4D34 /* AppDelegate.swift in Sources */,
 				F48370CC272B177F001D4D34 /* MainView.swift in Sources */,
+				F48370D0272B19E2001D4D34 /* ImageConstants.swift in Sources */,
 				F48370B8272B15F5001D4D34 /* OnePieceWorld.xcdatamodeld in Sources */,
 				F48370B0272B15F5001D4D34 /* SceneDelegate.swift in Sources */,
 			);
