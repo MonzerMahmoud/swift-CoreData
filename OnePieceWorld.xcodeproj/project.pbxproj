@@ -58,16 +58,48 @@
 		F48370AC272B15F5001D4D34 /* OnePieceWorld */ = {
 			isa = PBXGroup;
 			children = (
+				F48370C8272B164A001D4D34 /* Supporting Files */,
+				F48370C7272B162D001D4D34 /* Controllers */,
+				F48370C6272B1625001D4D34 /* Views */,
+				F48370C5272B161E001D4D34 /* Data Model */,
 				F48370AD272B15F5001D4D34 /* AppDelegate.swift */,
 				F48370AF272B15F5001D4D34 /* SceneDelegate.swift */,
-				F48370B1272B15F5001D4D34 /* ViewController.swift */,
-				F48370B3272B15F5001D4D34 /* Main.storyboard */,
-				F48370B9272B15FE001D4D34 /* Assets.xcassets */,
-				F48370BB272B15FE001D4D34 /* LaunchScreen.storyboard */,
 				F48370BE272B15FE001D4D34 /* Info.plist */,
-				F48370B6272B15F5001D4D34 /* OnePieceWorld.xcdatamodeld */,
 			);
 			path = OnePieceWorld;
+			sourceTree = "<group>";
+		};
+		F48370C5272B161E001D4D34 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				F48370B6272B15F5001D4D34 /* OnePieceWorld.xcdatamodeld */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		F48370C6272B1625001D4D34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F48370B3272B15F5001D4D34 /* Main.storyboard */,
+				F48370BB272B15FE001D4D34 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F48370C7272B162D001D4D34 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F48370B1272B15F5001D4D34 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F48370C8272B164A001D4D34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F48370B9272B15FE001D4D34 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
