@@ -24,6 +24,7 @@
 		F4DF349F272BDEEE00EEEDCA /* CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF349E272BDEEE00EEEDCA /* CGColor.swift */; };
 		F4DF34A2272BE27500EEEDCA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF34A1272BE27500EEEDCA /* String.swift */; };
 		F4DF34A5272BE4DA00EEEDCA /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF34A4272BE4DA00EEEDCA /* UIViewController.swift */; };
+		F4DF34A8272C8EA100EEEDCA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF34A7272C8EA100EEEDCA /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		F4DF349E272BDEEE00EEEDCA /* CGColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGColor.swift; sourceTree = "<group>"; };
 		F4DF34A1272BE27500EEEDCA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F4DF34A4272BE4DA00EEEDCA /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F4DF34A7272C8EA100EEEDCA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F48370B6272B15F5001D4D34 /* OnePieceWorld.xcdatamodeld */,
+				F4DF34A7272C8EA100EEEDCA /* UserModel.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				F4DF349F272BDEEE00EEEDCA /* CGColor.swift in Sources */,
 				F4837118272B364E001D4D34 /* UserDefaultKeys.swift in Sources */,
 				F48370B8272B15F5001D4D34 /* OnePieceWorld.xcdatamodeld in Sources */,
+				F4DF34A8272C8EA100EEEDCA /* UserModel.swift in Sources */,
 				F48370B0272B15F5001D4D34 /* SceneDelegate.swift in Sources */,
 				F48370D5272B1AC0001D4D34 /* MainView+UIExtension.swift in Sources */,
 				F48370E9272B1DB0001D4D34 /* StringConstants.swift in Sources */,
