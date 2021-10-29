@@ -5,8 +5,8 @@
 //  Created by Syber Expertise on 28/10/2021.
 //
 
-import Foundation
-
+import UIKit
+import CoreData
 class SessionManager {
     
     let defaults = UserDefaults.standard
@@ -14,6 +14,8 @@ class SessionManager {
     static let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
     
     static let profileFilePath = dataFilePath?.appendingPathComponent("UserProfile.plist")
+    
+    static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     static func removeUserPersistentInfos() {
         setUserLoggedOut()
@@ -81,11 +83,18 @@ class SessionManager {
         setUserProfile(user: User(name: "", type: ""))
     }
     
+    static func savePirateGroup(group: PirateGroup) {
+        let pirateGroup = PirateGroup(context: context)
+        pirateGroup.name = group.name
+        pirateGroup.captin = group.captin
+        savePirateGroupContext()
+    }
+    
         
 }
 
 extension SessionManager {
-    static func encodeUserProfileToFileNSCoder(profile:User,filePath:URL) {
+    fileprivate static func encodeUserProfileToFileNSCoder(profile:User,filePath:URL) {
         let encoder = PropertyListEncoder()
         
         do {
@@ -96,7 +105,7 @@ extension SessionManager {
         }
     }
     
-    static func decodeUserProfileFromFileNSCoder(filePath:URL) -> User {
+    fileprivate static func decodeUserProfileFromFileNSCoder(filePath:URL) -> User {
         var user = User(name: "", type: "")
         if let data = try? Data(contentsOf: filePath) {
             let decoder = PropertyListDecoder()
@@ -109,5 +118,16 @@ extension SessionManager {
             }
         }
         return user
+    }
+}
+
+extension SessionManager {
+    
+    fileprivate static func savePirateGroupContext() {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context \(error)")
+        }
     }
 }

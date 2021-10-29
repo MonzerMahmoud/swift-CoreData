@@ -11,5 +11,8 @@ class MainView: AbstractController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SessionManager.savePirateGroup(group: <#T##PirateGroup#>)
+        
     }
 }
