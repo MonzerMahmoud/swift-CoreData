@@ -20,10 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         } else {
             self.window = UIWindow()
-            let vc = MainView()
+            let vc = LoginController()
             self.window!.rootViewController = vc
             self.window!.makeKeyAndVisible()
-            self.window!.backgroundColor = .green
+            self.window!.backgroundColor = .white
         }
         return true
     }

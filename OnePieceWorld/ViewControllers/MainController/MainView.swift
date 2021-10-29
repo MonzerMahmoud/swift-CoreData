@@ -7,7 +7,8 @@
 
 import UIKit
 
-class MainView: UIViewController {
+class MainView: AbstractController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
