@@ -101,6 +101,16 @@ class SessionManager {
         return groupModel
     }
     
+    static func updatePirateGroupCaptin(withName name:String, NewCaptin captin:String) {
+        
+        for group in loadPirateGroupContext() {
+            if group.name == name {
+                group.captin = captin
+                savePirateGroupContext()
+                return
+            }
+        }
+    }
         
 }
 
