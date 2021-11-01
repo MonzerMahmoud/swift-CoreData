@@ -103,12 +103,16 @@ class SessionManager {
     
     static func updatePirateGroupCaptin(withName name:String, NewCaptin captin:String) {
         
-        for group in loadPirateGroupContext() {
-            if group.name == name {
-                group.captin = captin
-                savePirateGroupContext()
-                return
-            }
+        if let group = findPirateGroup(withName: name) {
+            group.captin = captin
+            savePirateGroupContext()
+        }
+    }
+    
+    static func deletePirateGroup(withName name:String) {
+        if let group = findPirateGroup(withName: name) {
+            context.delete(group)
+            savePirateGroupContext()
         }
     }
         
@@ -162,5 +166,14 @@ extension SessionManager {
             print("Error fetching data from context \(error)")
         }
         return []
+    }
+    
+    fileprivate static func findPirateGroup(withName name:String) -> PirateGroupCoreModel? {
+        for group in loadPirateGroupContext() {
+            if group.name == name {
+                return group
+            }
+        }
+        return nil
     }
 }
