@@ -82,39 +82,6 @@ class SessionManager {
     static func removeUserProfile() {
         setUserProfile(user: User(name: "", type: ""))
     }
-    
-    static func savePirateGroup(group: PirateGroup) {
-        let groupCoreModel = PirateGroupCoreModel(context: context)
-        groupCoreModel.name = group.name
-        groupCoreModel.captin = group.captin
-        savePirateGroupContext()
-    }
-    
-    static func loadPirateGroups() -> [PirateGroup] {
-        let groupsCoreModel = loadPirateGroupContext()
-        var groupModel:[PirateGroup] = []
-        
-        for group in groupsCoreModel {
-            groupModel.append(PirateGroup.init(name: group.name ?? "", captin: group.captin ?? ""))
-        }
-        
-        return groupModel
-    }
-    
-    static func updatePirateGroupCaptin(withName name:String, NewCaptin captin:String) {
-        
-        if let group = findPirateGroup(withName: name) {
-            group.captin = captin
-            savePirateGroupContext()
-        }
-    }
-    
-    static func deletePirateGroup(withName name:String) {
-        if let group = findPirateGroup(withName: name) {
-            context.delete(group)
-            savePirateGroupContext()
-        }
-    }
         
 }
 
@@ -143,37 +110,5 @@ extension SessionManager {
             }
         }
         return user
-    }
-}
-
-extension SessionManager {
-    
-    fileprivate static func savePirateGroupContext() {
-        do {
-            print("Succ")
-            try context.save()
-        } catch {
-            print("Error saving context \(error)")
-        }
-    }
-    
-    fileprivate static func loadPirateGroupContext() -> [PirateGroupCoreModel] {
-        let request : NSFetchRequest<PirateGroupCoreModel> = PirateGroupCoreModel.fetchRequest()
-        do {
-            print("Succ")
-            return try context.fetch(request)
-        } catch {
-            print("Error fetching data from context \(error)")
-        }
-        return []
-    }
-    
-    fileprivate static func findPirateGroup(withName name:String) -> PirateGroupCoreModel? {
-        for group in loadPirateGroupContext() {
-            if group.name == name {
-                return group
-            }
-        }
-        return nil
     }
 }
