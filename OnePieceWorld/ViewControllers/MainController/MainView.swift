@@ -11,8 +11,11 @@ class MainView: AbstractController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        SessionManager.savePirateGroup(group: <#T##PirateGroup#>)
+
+        for group in SessionManager.loadPirateGroups() {
+            print("Group Name: \(group.name)")
+            print("Group Captin: \(group.captin)")
+        }
         
     }
 }

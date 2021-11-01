@@ -25,7 +25,7 @@
 		F4DF34A2272BE27500EEEDCA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF34A1272BE27500EEEDCA /* String.swift */; };
 		F4DF34A5272BE4DA00EEEDCA /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF34A4272BE4DA00EEEDCA /* UIViewController.swift */; };
 		F4DF34A8272C8EA100EEEDCA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF34A7272C8EA100EEEDCA /* UserModel.swift */; };
-		F4DF34AB272CB4E100EEEDCA /* PirateGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF34AA272CB4E100EEEDCA /* PirateGroup.swift */; };
+		F4DF34AF272CC00300EEEDCA /* PirateGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF34AE272CC00300EEEDCA /* PirateGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +49,7 @@
 		F4DF34A1272BE27500EEEDCA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F4DF34A4272BE4DA00EEEDCA /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F4DF34A7272C8EA100EEEDCA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		F4DF34AA272CB4E100EEEDCA /* PirateGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PirateGroup.swift; sourceTree = "<group>"; };
+		F4DF34AE272CC00300EEEDCA /* PirateGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PirateGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				F48370B6272B15F5001D4D34 /* OnePieceWorld.xcdatamodeld */,
+				F4DF34AE272CC00300EEEDCA /* PirateGroup.swift */,
 				F4DF34A7272C8EA100EEEDCA /* UserModel.swift */,
-				F4DF34AA272CB4E100EEEDCA /* PirateGroup.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 				F48370AE272B15F5001D4D34 /* AppDelegate.swift in Sources */,
 				F48370CC272B177F001D4D34 /* MainView.swift in Sources */,
 				F483711C272B36EE001D4D34 /* SessionManager.swift in Sources */,
-				F4DF34AB272CB4E100EEEDCA /* PirateGroup.swift in Sources */,
+				F4DF34AF272CC00300EEEDCA /* PirateGroup.swift in Sources */,
 				F48370E6272B1D2F001D4D34 /* LoginController+UIExtension.swift in Sources */,
 				F4DF34A2272BE27500EEEDCA /* String.swift in Sources */,
 				F48370E1272B1C78001D4D34 /* AbstractViewController.swift in Sources */,

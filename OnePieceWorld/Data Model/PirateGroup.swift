@@ -8,6 +8,15 @@
 import Foundation
 import CoreData
 
-class PirateGroup: NSManagedObject {
+//class PirateGroupCoreModel: NSManagedObject {
+//
+//}
+class PirateGroup: Codable {
+    var name: String = ""
+    var captin: String = ""
     
+    init(name:String,captin:String) {
+        self.name = name
+        self.captin = captin
+    }
 }

@@ -84,10 +84,21 @@ class SessionManager {
     }
     
     static func savePirateGroup(group: PirateGroup) {
-        let pirateGroup = PirateGroup(context: context)
-        pirateGroup.name = group.name
-        pirateGroup.captin = group.captin
+        let groupCoreModel = PirateGroupCoreModel(context: context)
+        groupCoreModel.name = group.name
+        groupCoreModel.captin = group.captin
         savePirateGroupContext()
+    }
+    
+    static func loadPirateGroups() -> [PirateGroup] {
+        let groupsCoreModel = loadPirateGroupContext()
+        var groupModel:[PirateGroup] = []
+        
+        for group in groupsCoreModel {
+            groupModel.append(PirateGroup.init(name: group.name ?? "", captin: group.captin ?? ""))
+        }
+        
+        return groupModel
     }
     
         
@@ -125,9 +136,21 @@ extension SessionManager {
     
     fileprivate static func savePirateGroupContext() {
         do {
+            print("Succ")
             try context.save()
         } catch {
             print("Error saving context \(error)")
         }
+    }
+    
+    fileprivate static func loadPirateGroupContext() -> [PirateGroupCoreModel] {
+        let request : NSFetchRequest<PirateGroupCoreModel> = PirateGroupCoreModel.fetchRequest()
+        do {
+            print("Succ")
+            return try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+        }
+        return []
     }
 }
